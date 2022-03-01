@@ -1,7 +1,12 @@
-const Box = ({backgroundColor, width, height}) => {
+const Box = ({id, backgroundColor, width, height, removeBox}) => {
+
+    const handleBoxRemove = () => {
+        removeBox(id);
+    }
+
     return (
-        <div style={{backgroundColor: backgroundColor, height:` ${height}px`, width: `${width}px`}}>
-            
+        <div data-id={id} style={{backgroundColor: backgroundColor, height:` ${height}px`, width: `${width}px`}}>
+            <button onClick={handleBoxRemove} >close</button>
         </div>
     )
 }

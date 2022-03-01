@@ -13,7 +13,13 @@ const BoxList = () => {
         boxObj = {...boxObj, id:uuid()}
         setBoxes([...boxes, boxObj])
     }
-    const boxArray = boxes.map(e => <Box backgroundColor={e.background} width={e.width} height= {e.height} />)
+
+    const removeBox = (id) => {
+        const filteredArr = boxes.filter(box => box.id !== id)
+        setBoxes(filteredArr)
+    }
+
+    const boxArray = boxes.map(e => <Box id={e.id} backgroundColor={e.background} width={e.width} height= {e.height} removeBox={removeBox} />)
     return (
         <div>
             <div>      
