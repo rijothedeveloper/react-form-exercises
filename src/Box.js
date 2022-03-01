@@ -1,6 +1,6 @@
 const Box = ({backgroundColor, width, height}) => {
     return (
-        <div style={{backgroundColor: backgroundColor, height:` ${height}`, width: `${width}`}}>
+        <div style={{backgroundColor: backgroundColor, height:` ${height}px`, width: `${width}px`}}>
             
         </div>
     )
